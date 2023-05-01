@@ -1,0 +1,60 @@
+<div class="card my-5">
+    <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-12 order-md-1">
+                        <div class="mb-3">
+                            <label for="name">Name</label>
+                            <div class="input-group">
+                                <input type="text" [(ngModel)]="user.name" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="code">Code</label>
+                            <div class="input-group">
+                                <input type="text" [(ngModel)]="user.code" class="form-control" id="code" name="code" placeholder="Code">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="types">Type</label>
+                            <select class="form-select d-block w-100" [(ngModel)]="user.type" id="type" name="type">
+                                <option value="Cat">Cat</option>
+                                <option value="Dog">Dog</option>
+                                <option value="Horse">Horse</option>
+                                <option value="Rabbit">Rabbit</option>
+                                <option value="Parrot">Parrot</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="colors">Fur color</label>
+                            <select class="form-select d-block w-100" [(ngModel)]="user.color" id="colors" name="color">
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Yellow">Yellow</option>
+                                <option value="Blue">Blue</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="countries">Country of origin</label>
+                            <select class="form-select d-block w-100" id="countries" [(ngModel)]="user.country" name="country">
+                                <option value="Estonia">Estonia</option>
+                                <option value="Latvia">Latvia</option>
+                                <option value="Lithuania">Lithuania</option>
+                                <option value="Finland">Finland</option>
+                                <option value="Sweden">Sweden</option>
+                                <option value="Norway">Norway</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+    </div>
+</div>

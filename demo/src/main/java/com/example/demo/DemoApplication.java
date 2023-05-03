@@ -2,12 +2,11 @@ package com.example.demo;
 
 import com.example.demo.entities.Animal;
 import com.example.demo.repositories.AnimalRepository;
-import java.util.stream.Stream;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.yaml.snakeyaml.util.ArrayUtils;
 
 @SpringBootApplication
 public class DemoApplication {
@@ -31,5 +30,6 @@ public class DemoApplication {
             userRepository.findAll().forEach(System.out::println);
         };
     }
+    
 }
 //to start angular $ ng serve --open

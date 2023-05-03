@@ -10,17 +10,28 @@ import { Pet } from '../pet/pet';
 })
 export class PetFormComponent {
 
-  pet: Pet;
-
+  pet: Pet = new Pet;
   constructor(
     private route: ActivatedRoute, 
       private router: Router, 
         private PetService: PetService) {
+    
+  }
+  newPet(): void {
     this.pet = new Pet();
   }
 
+  save() {
+    this.PetService
+    .createPet(this.pet).subscribe(data => {
+      console.log(data)
+      this.pet = new Pet();
+      this.gotoPetList();
+    }, 
+    error => console.log(error));
+  }
   onSubmit() {
-    this.PetService.save(this.pet).subscribe(result => this.gotoPetList());
+    this.save();    
   }
 
   gotoPetList() {

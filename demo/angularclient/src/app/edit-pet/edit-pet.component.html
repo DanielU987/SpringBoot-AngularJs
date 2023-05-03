@@ -1,13 +1,14 @@
 <div class="card my-5">
     <div class="card-body">
-        <form (ngSubmit)="onSubmit()" #petForm="ngForm">
+       
+        <form #form="ngForm" (ngSubmit)="onSubmit()" >
             <div class="form-group">
                 <div class="row">
                     <div class="col-md-12 order-md-1">
                         <div class="mb-3">
                             <label for="name">Name</label>
                             <div class="input-group">
-                                <input type="text" [(ngModel)]="pets[petId].name" class="form-control" id="name" name="name"
+                                <input type="text" [(ngModel)]="pet.name"  class="form-control" id="name" name="name"
                                     placeholder="Name"   required #name="ngModel">
                             </div>
                             <div [hidden]="!name.pristine" class="alert alert-warning">Name is required</div>
@@ -16,7 +17,7 @@
                         <div class="mb-3">
                             <label for="code">Code</label>
                             <div class="input-group">
-                                <input type="text" [(ngModel)]="pets[petId].code" class="form-control" id="code" name="code"
+                                <input type="text" [(ngModel)]="pet.code" class="form-control" id="code" name="code"
                                     placeholder="Code" required #code="ngModel">
                             </div>
                             <div [hidden]="!code.pristine" class="alert alert-warning">Code is required</div>
@@ -25,7 +26,7 @@
                         <div class="mb-3">
                             <label for="types">Type</label>
                             <div class="input-group">
-                                <select class="form-select d-block w-100" [(ngModel)]="pets[petId].type" id="type" name="type"
+                                <select class="form-select d-block w-100" [(ngModel)]="pet.type" id="type" name="type"
                                     required #type="ngModel">
 
                                     <option value="Cat">Cat</option>
@@ -41,7 +42,7 @@
                         <div class="mb-3">
                             <label for="colors">Fur color</label>
                             <div class="input-group">
-                                <select class="form-select d-block w-100" [(ngModel)]="pets[petId].color" id="colors"
+                                <select class="form-select d-block w-100" [(ngModel)]="pet.color" id="colors"
                                     name="color" required #color="ngModel">
                                     <option value="Black">Black</option>
                                     <option value="White">White</option>
@@ -56,7 +57,7 @@
                         <div class="mb-3">
                             <label for="countries">Country of origin</label>
                             <div class="input-group">
-                                <select class="form-select d-block w-100" id="countries" [(ngModel)]="pets[petId].country"
+                                <select class="form-select d-block w-100" id="countries" [(ngModel)]="pet.country"
                                     name="country" required #country="ngModel">
                                     <option value="Estonia">Estonia</option>
                                     <option value="Latvia">Latvia</option>
@@ -71,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" class="btn btn-info">Save</button>
         </form>
     </div>
 </div>

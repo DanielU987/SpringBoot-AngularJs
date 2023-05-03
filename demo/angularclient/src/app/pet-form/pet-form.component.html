@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-info">Submit</button>
+            <button type="submit" [disabled]="!petForm.form.valid"  class="btn btn-info">Submit</button>
         </form>
     </div>
 </div>

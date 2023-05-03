@@ -13,14 +13,14 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let pet of pets">
+          <tr *ngFor="let pet of pets |async">
             <td>{{ pet.id }}</td>
             <td>{{ pet.name }}</td>
             <td>{{ pet.code }}</td>
             <td>{{ pet.type }}</td>
             <td>{{ pet.color }}</td>
             <td>{{ pet.country }}</td>
-            <td><a href="editpet/{{pet.id}}" ><button type="button" id="{{pet.id}}"  class="btn btn-info">Edit</button></a></td>
+            <td><button (click)="updatePet(pet.id)" class="btn btn-info" style="margin-left: 10px">Update</button></td>
           </tr>
           
         </tbody>

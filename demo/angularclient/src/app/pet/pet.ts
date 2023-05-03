@@ -1,4 +1,4 @@
-export class User {
+export class Pet {
     id!: string;
     name!: string;
     code!: string;

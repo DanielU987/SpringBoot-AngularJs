@@ -4,15 +4,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { UserFormComponent } from './user-form/user-form.component';
-import { UserServiceService } from './service/user-service.service';
+import { PetListComponent } from './pet-list/pet-list.component';
+import { PetFormComponent } from './pet-form/pet-form.component';
+import { PetService } from './service/pet-service.service';
+import { EditPetComponent } from './edit-pet/edit-pet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent,
-    UserFormComponent
+    PetListComponent,
+    PetFormComponent,
+    EditPetComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { UserServiceService } from './service/user-service.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserServiceService],
+  providers: [PetService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

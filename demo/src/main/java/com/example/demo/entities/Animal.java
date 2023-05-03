@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Person {
+public class Animal {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,7 +17,7 @@ public class Person {
     private final String color;
     private final String country;
     
-    public Person() {
+    public Animal() {
         this.name = "";
         this.code = "";
         this.type = "";
@@ -25,7 +25,7 @@ public class Person {
         this.country = "";
     }
     
-    public Person(String name ,String code,String type,String color,String country) {
+    public Animal(String name ,String code,String type,String color,String country) {
         this.name = name;
         this.code = code;
         this.type = type;
@@ -59,6 +59,6 @@ public class Person {
     
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", code=" + code +"," + "color=" + color +", country=" + country +'}';
+        return "Animal{" + "id=" + id + ", name=" + name + ", code=" + code +"," + "color=" + color +", country=" + country +'}';
     }
 }

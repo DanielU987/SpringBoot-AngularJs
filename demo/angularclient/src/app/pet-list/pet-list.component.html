@@ -9,17 +9,20 @@
             <th scope="col">Type</th>
             <th scope="col">Fur color</th>
             <th scope="col">Country of origin</th>
+            <th scope="col"></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users">
-            <td>{{ user.id }}</td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.code }}</td>
-            <td>{{ user.type }}</td>
-            <td>{{ user.color }}</td>
-            <td>{{ user.country }}</td>
+          <tr *ngFor="let pet of pets">
+            <td>{{ pet.id }}</td>
+            <td>{{ pet.name }}</td>
+            <td>{{ pet.code }}</td>
+            <td>{{ pet.type }}</td>
+            <td>{{ pet.color }}</td>
+            <td>{{ pet.country }}</td>
+            <td><a href="editpet/{{pet.id}}" ><button type="button" id="{{pet.id}}"  class="btn btn-info">Edit</button></a></td>
           </tr>
+          
         </tbody>
       </table>
     </div>

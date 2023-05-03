@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, Route, ParamMap } from '@angular/router';
 import { PetService } from '../service/pet-service.service';
 import { Pet } from '../pet/pet';
 @Component({
@@ -12,9 +12,9 @@ export class EditPetComponent {
   pet: Pet;
 
   constructor(
-    private route: ActivatedRoute, 
-      private router: Router, 
-        private PetService: PetService) {
+    private route: ActivatedRoute,
+    private router: Router,
+    private PetService: PetService) {
     this.pet = new Pet();
   }
 
@@ -26,9 +26,19 @@ export class EditPetComponent {
     this.router.navigate(['/pets']);
   }
   pets: Pet[] = [];
+  petId = 0;
   ngOnInit() {
+    
     this.PetService.findAll().subscribe(data => {
+      console.log(data)
       this.pets = data;
+      
     });
+    this.route.paramMap.subscribe((paramMap: ParamMap) => {
+      
+      this.petId = parseInt(paramMap.get('id')!)-1
+      console.log(this.petId)
+    })
   }
+  
 }

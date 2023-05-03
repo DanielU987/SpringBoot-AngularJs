@@ -6,7 +6,7 @@ import { EditPetComponent } from './edit-pet/edit-pet.component';
 
 const routes: Routes = [
   { path: 'pets', component: PetListComponent },
-  //{ path: '', redirectTo: '/pets', pathMatch: 'full' },
+  { path: '', redirectTo: '/pets', pathMatch: 'full' },
   { path: 'addpet', component: PetFormComponent },
   { path: 'editpet/:id', component: EditPetComponent }
 ];

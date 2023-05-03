@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pet } from '../pet/pet';
 import { PetService } from '../service/pet-service.service';
-import {Location} from '@angular/common'; 
+
 @Component({
   selector: 'app-pet-list',
   templateUrl: './pet-list.component.html',

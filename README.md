@@ -19,18 +19,21 @@ To run this application, you need to have the following installed on your system
 ## Getting Started
 Follow these steps to get started with the Pet CRUD app:
 
-1. Clone the repository from GitHub: https://github.com/DanielU987/SpringBoot-AngularJs
-2. Backend setup:
+1. Clone the repository from GitHub:
+```
+git clone https://github.com/DanielU987/SpringBoot-AngularJs
+```
+4. Backend setup:
    - Open the project in your preferred Java IDE (e.g., IntelliJ, Eclipse).
    - Configure the database connection in `src/main/resources/application.properties`.
    - Build and run the Spring Boot application.
 
-3. Frontend setup:
+5. Frontend setup:
    - Open a command prompt or terminal and navigate to the `angularclient` directory of the project.
    - Run `npm install` to install the required dependencies.
    - Run `ng serve` to start the Angular development server.
 
-4. Browser should be opened by default if not open your web browser and access the application at `http://localhost:4200`.
+6. Browser should be opened by default if not open your web browser and access the application at `http://localhost:4200`.
 
 ## Usage
 - On the homepage, you will see a list of pets (if any exist).

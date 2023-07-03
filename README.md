@@ -21,7 +21,7 @@ Follow these steps to get started with the Pet CRUD app:
 
 1. Clone the repository from GitHub:
 ```
-git clone https://github.com/DanielU987/SpringBoot-AngularJs
+git clone https://github.com/DanielU987/SpringBoot-AngularJs.git
 ```
 4. Backend setup:
    - Open the project in your preferred Java IDE (e.g., IntelliJ, Eclipse).
